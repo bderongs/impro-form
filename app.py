@@ -44,7 +44,7 @@ def start_conversation():
             json= {"messages": [
                 {
                 "role": "assistant", 
-                "content": "L'industrie de l'entreprise est la création de site web"
+                "content": "L'industrie de l'entreprise est la fourniture d'une intelligence artificielle s'intégrant aux formulaires de contact des sites internets."
             }]}
         )
         app.logger.info("End thread")
