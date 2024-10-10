@@ -27,6 +27,7 @@ def start_conversation():
         return '', 204
     data = request.json
     user_message = data.get('message')
+    industry = data.get('industry', 'default')  # Get the industry from the request
 
     if not API_KEY:
         return jsonify({"error": "API key not set"}), 500
@@ -44,7 +45,7 @@ def start_conversation():
             json= {"messages": [
                 {
                 "role": "assistant", 
-                "content": "L'industrie de l'entreprise est la fourniture d'une intelligence artificielle s'intégrant aux formulaires de contact des sites internets."
+                "content": f"L'entreprise pour laquelle tu réponds est dans le domaine de {industry}."
             }]}
         )
         app.logger.info("End thread")
