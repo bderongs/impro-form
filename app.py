@@ -45,7 +45,7 @@ def start_conversation():
             json= {"messages": [
                 {
                 "role": "assistant", 
-                "content": f"Domaine de l'entreprise: {industry}."
+                "content": f"L'entreprise pour laquelle tu réponds est dans le domaine de {industry}."
             }]}
         )
         app.logger.info("End thread")
